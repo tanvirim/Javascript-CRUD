@@ -1,36 +1,43 @@
 import  {userData} from "./data.js";
 
-let thead = "";
+let tbody = "";
 if (typeof document !== "undefined") {
-  thead = document.querySelector('thead');
+  tbody = document.querySelector('tbody');
 }
+
+//update table
 
 function updateTable(){
 
     let data = "";
+    let id = null ;
 
     if (userData.length>0) {
         for (let i = 0; i < userData.length; i++) {
             
-            data += ` <tr class="table-row">
-                    <th>${userData[i].firstName}</th>
-                    <th>${userData[i].lastName}</th>
-                    <th>${userData[i].email}</th>
-                    <th>${userData[i].point}</th>
-                    <th>${userData[i].phone}</th>
-                    <th>${userData[i].company}</th>
-                    <th> <button type="button" class="btn btn-secondary"> Edit</button></th>
-                    <th> <button type="button" class="btn btn-success">Delete</button> </th>
-
+            data += ` <tr id="${i}">
+                    <td>${userData[i].firstName}</td>
+                    <td>${userData[i].lastName}</td>
+                    <td>${userData[i].email}</td>
+                    <td>${userData[i].point}</td>
+                    <td>${userData[i].phone}</td>
+                    <td>${userData[i].company}</td>
+                    <td> <button  type="button" class="btn btn-primary" onclick="editTable()"> Edit</button></td>
+                    <td> <button type="button" class="btn btn-danger">Delete</button> </td>
         </tr>
-            `
-            
+            `  
         }
 
-        thead.innerHTML = data ;
-        console.log(data);
-        
+        tbody.innerHTML = data ;
     }
+
+   
 }
 
 updateTable()
+
+function editTable(event){
+    return console.log('event');
+}
+
+editTable()

@@ -10,48 +10,45 @@
 </head>
 
 <body>
-        <div id="hay" class="container">
+        <div class="container mob-table">
             <div class="headers">
                 <h2 class="table-title"> Manage Users</h2>
-                <button type="button" class="btn btn-primary">Add User</button>
+                <buttontype="button" class="btn add">Add User</button>
             </div>
-        </div>
 
-        <div class="container">
+        
+            <table class="table table-striped ">
+                <thead>
+                    <tr>
+                        <th>first name</th>
+                        <th>last name</th>
+                        <th>email</th>
+                        <th>point</th>
+                        <th>phone</th>
+                        <th>company</th>
+                        <th></th>
+                        <th></th>
 
-        <table class="table table-striped ">
-            <thead>
-                <tr class="table-row-1">
-                    <th>first name</th>
-                    <th>last name</th>
-                    <th>email</th>
-                    <th>point</th>
-                    <th>phone</th>
-                    <th>company</th>
+                    </tr>
 
-                </tr>
+                </thead>
+                
 
-            </thead>
-            
+                <tbody>
+                    <tr class="table-row">
+                        <td>james</td>
+                        <td>haward</td>
+                        <td>email@</td>
+                        <td>6</td>
+                        <td>246689456</td>
+                        <td>company.ltd</td>
+                        <td> <button type="button" class="btn btn-primary"> Edit</button></td>
+                        <td> <button type="button" class="btn btn-danger">Delete</button> </td>
+                    </tr>
+                </tbody>
 
-            <thead>
-                <tr class="table-row">
-                    <th>james</th>
-                    <th>haward</th>
-                    <th>email@</th>
-                    <th>6</th>
-                    <th>246689456</th>
-                    <th>company.ltd</th>
-                    <th> <button type="button" class="btn btn-secondary"> Edit</button></th>
-                    <th> <button type="button" class="btn btn-success">Delete</button> </th>
-
-                    
-
-                </tr>
-
-            </thead>
-        </table>   
-    </div>
+            </table>   
+    
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="module" src="app.js" charset="utf-8"></script>
